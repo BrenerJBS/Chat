@@ -26,7 +26,7 @@ const getMessagesInRoom = (room) =>
 
 const saveMessagesDB = async (room) => {          
   try {
-    const messages =  await axios.post('https://onledu.herokuapp.com/api/chat/saveMessagesDB', {
+    const messages =  await axios.post('https://onledu-back-end.onrender.com/api/chat/saveMessagesDB', {
       messages: getMessagesInRoom(room)
     })
     if (messages)
